@@ -1,0 +1,8 @@
+/**
+ * https://stackoverflow.com/a/34366930
+ * needed to load font-awesome from src.
+ */
+$fa-font-path: "~font-awesome/fonts" !default;
+
+/** get font-awesome */
+@import "~font-awesome/scss/font-awesome";

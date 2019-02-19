@@ -1,0 +1,27 @@
+{
+    "name": "dimezilla/wp-content",
+    "description": "Wedding site",
+    "type": "Website",
+    "authors": [
+        {
+            "name": "dimezilla",
+            "email": "diamond.joshh@gmail.com"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/stackable-ultimate-gutenberg-blocks": "^1.12",
+        "wpackagist-plugin/advanced-custom-fields": "^5.7",
+        "wpackagist-plugin/wp-google-maps": "^7.11"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}

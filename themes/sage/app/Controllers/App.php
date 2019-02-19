@@ -30,4 +30,13 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function getField($name = '', $page_id = null)
+    {
+        if (empty($name)) {
+            return null;
+        }
+
+        return get_field($name, $page_id);
+    }
 }

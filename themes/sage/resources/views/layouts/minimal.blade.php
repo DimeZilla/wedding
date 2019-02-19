@@ -4,9 +4,11 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
 
-    <main class="main px-3">
+    <main class="main h-100">
       @yield('content')
     </main>
+
+    @include("partials.minimal-menu")
 
     @php do_action('get_footer') @endphp
     @php wp_footer() @endphp

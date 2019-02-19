@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/app/themes/sage/dist/";
+/******/ 	__webpack_require__.p = "/wp-content/themes/sage/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -88,8 +88,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(12);
 // import external dependencies
 
 
@@ -7150,18 +7150,78 @@ Router.prototype.loadEvents = function loadEvents () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_MinimalMenu_js__ = __webpack_require__(10);
+
+
 /* harmony default export */ __webpack_exports__["a"] = ({
   init: function init() {
     // JavaScript to be fired on all pages
+    if($('.minimal-menu').length) {
+      $('.minimal-menu').each(function () {
+        new __WEBPACK_IMPORTED_MODULE_0__util_MinimalMenu_js__["a" /* default */]($(this));
+      });
+    }
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 });
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/**
+ * For the minimal menu functionality
+ */
+var MinimalMenu = function MinimalMenu(elem) {
+  if (! (elem instanceof $)) {
+    throw new Error('Element must be an instance of jQuery');
+  }
+  this.$elem = elem;
+  this.$menu = this.$elem.find('.minimal-menu-menu');
+  this.$button = this.$elem.find('button.menu-trigger');
+
+  this.$button.on('click', this.toggleMenu());
+};
+
+MinimalMenu.prototype.toggleMenu = function toggleMenu () {
+    var this$1 = this;
+
+  return function () {
+    this$1.$elem.removeClass('bounce');
+    if (this$1.$menu.hasClass('d-none')) {
+      this$1.showMenu();
+    }
+    else {
+      this$1.hideMenu();
+    }
+  };
+};
+
+MinimalMenu.prototype.showMenu = function showMenu () {
+  this.$menu.hide();
+  this.$menu.removeClass('d-none');
+  this.$menu.fadeIn(500);
+};
+
+MinimalMenu.prototype.hideMenu = function hideMenu () {
+    var this$1 = this;
+
+  this.$menu.fadeOut(500, function () {
+    this$1.$menu.addClass('d-none');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (MinimalMenu);
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7176,7 +7236,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7188,7 +7248,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
