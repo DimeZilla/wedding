@@ -1,0 +1,14 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+/* theme colors */
+$primary: rgb(156, 46, 51);
+$secondary: rgb(153, 95, 51);
+$info: rgb(156, 188, 132);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$font-family-base: "Hammersmith One", sans-serif;
+

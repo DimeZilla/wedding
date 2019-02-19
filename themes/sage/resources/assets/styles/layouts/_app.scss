@@ -1,0 +1,15 @@
+/**
+ * Main layout for the app.blade.php
+ */
+$sidebar-width: 295px;
+$content-break: "lg";
+
+.main-sidebar {
+  width: $sidebar-width;
+}
+
+@include media-breakpoint-up($content-break) {
+  .main-content {
+    margin-left: $sidebar-width;
+  }
+}

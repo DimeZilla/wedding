@@ -1,0 +1,38 @@
+/**
+ * Styling for navigation items
+ */
+$wp-nav-item-class: "menu-item";
+$wp-nav-item-active-class: "current-menu-item";
+
+.nav {
+  .#{$wp-nav-item-class} {
+    @extend .nav-item;
+
+    > a {
+      @extend .nav-link;
+    }
+
+    &.#{$wp-nav-item-active-class} > a {
+      @extend .active;
+    }
+  }
+
+  &.navbar-dark {
+    $non-active: map-get($grays, "400");
+    $active: map-get($colors, "white");
+
+    .#{$wp-nav-item-class} {
+      > a {
+        color: $non-active;
+      }
+
+      &:hover > a {
+        color: $active;
+      }
+
+      &.#{$wp-nav-item-active-class} > a {
+        color: $active;
+      }
+    }
+  }
+}
