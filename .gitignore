@@ -5,3 +5,7 @@ themes/twenty*
 debug.log
 
 /vendor/
+plugins/
+
+# but not these ones
+plugins/rad-acf-hooks/
