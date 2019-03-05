@@ -30,3 +30,12 @@ div.scrollicon {
   width: 100%;
   text-align: center;
 }
+
+/**
+ * some block override styles
+ */
+
+main .wp-block-ugb-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
