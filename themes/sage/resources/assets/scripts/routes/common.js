@@ -1,4 +1,5 @@
 import MinimalMenu from '../util/MinimalMenu.js';
+import MainHero from '../util/MainHero.js';
 
 export default {
   init() {
@@ -7,6 +8,8 @@ export default {
       $('.minimal-menu').each(function () {
         new MinimalMenu($(this));
       });
+
+      MainHero.init();
     }
   },
   finalize() {

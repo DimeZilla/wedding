@@ -1,6 +1,10 @@
 html,
 body {
   height: 100%;
+
+  main {
+    min-height: 100%;
+  }
 }
 
 h1,
@@ -14,4 +18,15 @@ h6 {
 
 .font-pinyon {
   font-family: "Pinyon Script", cursive !important;
+}
+
+div.scrollicon {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
 }
