@@ -1,0 +1,7 @@
+$list-positions: "top" "center" "left" "right" "bottom";
+
+@each $pos in $list-positions {
+  .bg-pos-#{$pos} {
+    background-position: $pos !important;
+  }
+}
